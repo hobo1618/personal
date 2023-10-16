@@ -1,0 +1,46 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            ul {
+                margin-left: 300px;
+            }
+            li {
+                font-size: 120px;
+                line-height: 100px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            a:hover {
+                font-weight: 700;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <Header title={SITE_TITLE} /> -->
+        <main>
+            <ul>
+                <li><a href="/tango/">tango</a></li>
+                <li><a href="/fizzles/">fizzles</a></li>
+                <li><a href="/notes/">notes</a></li>
+                <li><a href="/me/">me</a></li>
+            </ul>
+        </main>
+    </body>
+</html>
+

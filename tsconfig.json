@@ -1,0 +1,30 @@
+{
+    "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        "strictNullChecks": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@icons/r/*": [
+                "src/svg/regular/*"
+            ],
+            "@icons/b/*": [
+                "src/svg/bold/*"
+            ],
+            "@icons/d/*": [
+                "src/svg/duotone/*"
+            ],
+            "@icons/f/*": [
+                "src/svg/fill/*"
+            ],
+            "@icons/l/*": [
+                "src/svg/light/*"
+            ],
+            "@icons/t/*": [
+                "src/svg/thin/*"
+            ]
+        }
+    }
+}
