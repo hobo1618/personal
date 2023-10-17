@@ -70,6 +70,19 @@ blockquote {
 	}
 }
 
+a:hover {
+    font-weight: 700;
+}
+
+
+.jumbo {
+    font-size: 120px;
+    line-height: 100px; 
+    font-weight: 400; 
+    text-transform: uppercase;
+    margin: 0;
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;

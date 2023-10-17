@@ -1,5 +1,5 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead from "@/components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -19,12 +19,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             ul {
                 margin-left: 300px;
             }
-            li {
-                font-size: 120px;
-                line-height: 100px;
-                font-weight: 400;
-                text-transform: uppercase;
-            }
             a:hover {
                 font-weight: 700;
                 cursor: pointer;
@@ -34,7 +28,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <body>
         <!-- <Header title={SITE_TITLE} /> -->
         <main>
-            <ul>
+            <ul class="jumbo">
                 <li><a href="/tango/">tango</a></li>
                 <li><a href="/fizzles/">fizzles</a></li>
                 <li><a href="/notes/">notes</a></li>
