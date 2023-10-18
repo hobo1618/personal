@@ -11,6 +11,17 @@ const notes = defineCollection({
 	}),
 });
 
+const thisSite = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+        draft: z.boolean().default(true),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+		heroImage: z.string().optional(),
+	}),
+});
+
 const tags = defineCollection({
     // Type-check frontmatter using a schema
     schema: z.array(z.string()),
@@ -28,4 +39,4 @@ const fizzles = defineCollection({
 	}),
 });
 
-export const collections = { fizzles, notes, tags };
+export const collections = { fizzles, notes, tags, thisSite };

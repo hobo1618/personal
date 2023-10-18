@@ -1,8 +1,9 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import SectionHeader from "@/components/SectionHeader.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
----
 
+---
 <!doctype html>
 <html lang="en">
     <head>
@@ -19,12 +20,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             ul {
                 margin-left: 300px;
             }
-            li {
-                font-size: 120px;
-                line-height: 100px;
-                font-weight: 400;
-                text-transform: uppercase;
-            }
             a:hover {
                 font-weight: 700;
                 cursor: pointer;
@@ -34,13 +29,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <body>
         <!-- <Header title={SITE_TITLE} /> -->
         <main>
-            <ul>
-                <li><a href="/tango/">tango</a></li>
-                <li><a href="/fizzles/">fizzles</a></li>
-                <li><a href="/notes/">notes</a></li>
-                <li><a href="/me/">me</a></li>
-            </ul>
+            <section>
+                <SectionHeader title="Tango" description="A collborative classroom application I got myself into"/>
+                <p>there isn't much to say</p>
+            </section>
         </main>
     </body>
 </html>
-

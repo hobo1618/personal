@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<style>
+.jumbo {
+    font-size: 120px;
+    line-height: 100px; 
+    font-weight: 400; 
+    text-transform: uppercase;
+    margin: 0;
+}
+</style>
+
+<h1 class="jumbo" style={{ fontWeight: "700" }}>{title}</h1>
+<p>{description}</p>
