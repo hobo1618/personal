@@ -4,7 +4,7 @@ import Header from "@/components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
-import SectionHeader from "@/components/SectionHeader.astro";
+import PageTitle from "@/components/PageTitle.astro";
 
 const posts = (await getCollection("thisSite"))
     .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
@@ -89,7 +89,7 @@ const posts = (await getCollection("thisSite"))
         <Header />
         <main>
             <section>
-                <SectionHeader
+                <PageTitle
                     title="This"
                     description="Tech I used to build this site. Other stuff too, like robots."
                 />
