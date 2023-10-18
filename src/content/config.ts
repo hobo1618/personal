@@ -1,25 +1,38 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
-const notes = defineCollection({
-	schema: z.object({
+const post = z.object({
 		title: z.string(),
 		description: z.string(),
         draft: z.boolean().default(true),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
-	}),
+})
+
+export type Post = z.infer<typeof post>;
+
+const notes = defineCollection({
+    schema: post,
+	// schema: z.object({
+	// 	title: z.string(),
+	// 	description: z.string(),
+ //        draft: z.boolean().default(true),
+	// 	pubDate: z.coerce.date(),
+	// 	updatedDate: z.coerce.date().optional(),
+	// 	heroImage: z.string().optional(),
+	// }),
 });
 
 const thisSite = defineCollection({
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-        draft: z.boolean().default(true),
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
-	}),
+    schema: post,
+	// schema: z.object({
+	// 	title: z.string(),
+	// 	description: z.string(),
+ //        draft: z.boolean().default(true),
+	// 	pubDate: z.coerce.date(),
+	// 	updatedDate: z.coerce.date().optional(),
+	// 	heroImage: z.string().optional(),
+	// }),
 });
 
 const tags = defineCollection({
@@ -28,15 +41,16 @@ const tags = defineCollection({
 });
 
 const fizzles = defineCollection({
+    schema: post,
 	// Type-check frontmatter using a schema
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-        draft: z.boolean().default(true),
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
-	}),
+	// schema: z.object({
+	// 	title: z.string(),
+	// 	description: z.string(),
+ //        draft: z.boolean().default(true),
+	// 	pubDate: z.coerce.date(),
+	// 	updatedDate: z.coerce.date().optional(),
+	// 	heroImage: z.string().optional(),
+	// }),
 });
 
 export const collections = { fizzles, notes, tags, thisSite };

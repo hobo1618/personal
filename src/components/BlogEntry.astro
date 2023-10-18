@@ -1,0 +1,13 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+const { collection, slug, title, pubDate } = Astro.props;
+---
+
+<li>
+    <a href={`/${collection}/${slug}/`}>
+        <h4>{title}</h4>
+        <p>
+            <FormattedDate date={pubDate} />
+        </p>
+    </a>
+</li>
