@@ -1,0 +1,145 @@
+---
+import SocialList from "@/components/SocialList.astro";
+// import PostPreview from "@/components/blog/PostPreview.astro";
+import PageLayout from "@/layouts/Base.astro";
+// import { getAllPosts, sortMDByDate } from "@/utils";
+
+// const MAX_POSTS = 10;
+// const allPosts = await getAllPosts();
+// const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+
+const bulletPoints: { desc: string; href: string; title: string }[] = [
+	{
+		desc: "Build, Manage, and Deliver rich, collaborative lesson content.",
+		href: "https://tangoapp.so",
+		title: "Tango App",
+	},
+	{
+		desc: "Free, open-source test prep for everyone.",
+		href: "https://opensat.lol",
+		title: "Open SAT(R)",
+	},
+	{
+		desc: "The Open SAT(R) discord channel.",
+		href: "https://discord.com/invite/BRDEKRrG",
+		title: "Discord",
+	},
+	{
+		desc: "A bunch of dead and useless repositories.",
+		href: "https://github.com/hobo1618?tab=repositories",
+		title: "Github",
+	},
+	{
+		desc: "A more corporate version of this site",
+		href: "https://www.linkedin.com/in/hobden-prep/",
+		title: "LinkedIn",
+	},
+];
+---
+
+<PageLayout meta={{ title: "Home" }}>
+  <section>
+		<h2 class="title mb-4 text-xl">Bullet Points</h2>
+		<dl class="space-y-4">
+			{
+				bulletPoints.map(({ desc, href, title }) => (
+					<div class="flex flex-col gap-2 md:flex-row">
+						<dt>
+							<span class="flex">
+								<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
+									{title}
+								</a>
+								:
+							</span>
+						</dt>
+						<dd>{desc}</dd>
+					</div>
+				))
+			}
+		</dl>
+	</section>
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">I know what I'm talking about when I talk about...</h2>
+		<p class="mb-4">
+			teaching. I have been teaching one-on-one, full time, for over a decade, and I've learnt a lot
+			about how humans think, about the how we all share the same blindspots and how we all tend to
+			give up when we're just inches away from the answer. I know because I've taught the same set
+			of questions to thousands of students. We all miss the word "by" in question 13. We all
+			struggle to unravel the double negatives in that passage about the Elk experiment.
+		</p>
+		<p class="mb-4">
+			As a developer of software and a lover of literature, I can't help but view the learning
+			process through both lenses. Learning is rigorous, repetitive and logical; but it is also
+			aspirational, psychological and intuitive.
+		</p>
+		<p class="mb-4">
+			Yes, I've helped thousands of students raise their SAT scores. But I like to think that I
+			teach more than math and grammar. I like to think that I teach my students how to approach
+			problems and how to persist when they're convinced that the problem they are facing is
+			unsolvable.
+		</p>
+	</section>
+	<section aria-label="Blog post list" class="mt-16">
+		<h2 class="title mb-4 text-xl">People might find this useful...</h2>
+		<p class="mb-4">
+			At the start of this year I started publishing everything I know about the SAT(R) on a new
+			blog, <a class="sm:hover:underline text-accent " href="https://www.opensat.lol" >opensat.lol</a>, a free, open-source resource for online SAT(R) prep.
+		</p>
+		<p class="mb-4">
+			My aim is to create the best available test-prep material, without the BS messaging that
+			usually comes with SAT(R) advice.
+		</p>
+		<p class="mb-4">
+			If you are a developer or a teacher and you want to contribute, I'd be happy to have help!
+		</p>
+		<p>Or if you feel like sponsoring the project, head over to Github and make a contribution.</p>
+	</section>
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">I like breaking things...</h2>
+
+		<p class="mb-4">
+			My wife and I have recently began work on Tango, an application that allows teachers to build,
+			manage, and teach rich content for their online lessons.
+		</p>
+
+		<p class="mb-4">
+			As a part of the process we've both been learning all sorts of new skills. Tanya's learnt all
+			about UI/UX design, fundraising, and strategic development. For my part I've learnt a whole
+			lot about software development. I've slowly become more adept at building and deploying
+			collaborative web apps through technologies like the wonderful `yjs`, an implementation of
+			CRDT (Conflict Free Replicated Data-types), which allow multiple users to edit the same
+			document simultaneously without conflicts. It's fucking magical.
+		</p>
+
+		<p class="mb-4">
+			At Tango, we're using this technology to enable teachers to create rich, collaborative content
+			for their students.
+		</p>
+
+		<p class="mb-4">
+			I know there's a place for Tango out there, because I've been looking for an app that does
+			exactly this for years to use with my students, but everything so far has come up short.
+		</p>
+
+		<a
+			class="sm:hover:underline text-accent "
+			data-astro-prefetch
+			href="/"
+		>
+			Sign up to our beta waitlist here.
+		</a>
+    <br/>
+		<a
+			class="sm:hover:underline text-accent"
+			data-astro-prefetch
+			href="/"
+		>
+			Check out our landing page here.
+		</a>
+   </section>
+
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">Find me</h2>
+	<SocialList />
+   </section>
+</PageLayout>
