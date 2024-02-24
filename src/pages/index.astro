@@ -38,7 +38,7 @@ const bulletPoints: { desc: string; href: string; title: string }[] = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section>
+	<section>
 		<h2 class="title mb-4 text-xl">Bullet Points</h2>
 		<dl class="space-y-4">
 			{
@@ -83,7 +83,8 @@ const bulletPoints: { desc: string; href: string; title: string }[] = [
 		<h2 class="title mb-4 text-xl">People might find this useful...</h2>
 		<p class="mb-4">
 			At the start of this year I started publishing everything I know about the SAT(R) on a new
-			blog, <a class="sm:hover:underline text-accent " href="https://www.opensat.lol" >opensat.lol</a>, a free, open-source resource for online SAT(R) prep.
+			blog, <a class="text-accent sm:hover:underline" href="https://www.opensat.lol">opensat.lol</a
+			>, a free, open-source resource for online SAT(R) prep.
 		</p>
 		<p class="mb-4">
 			My aim is to create the best available test-prep material, without the BS messaging that
@@ -121,25 +122,17 @@ const bulletPoints: { desc: string; href: string; title: string }[] = [
 			exactly this for years to use with my students, but everything so far has come up short.
 		</p>
 
-		<a
-			class="sm:hover:underline text-accent "
-			data-astro-prefetch
-			href="/"
-		>
+		<a class="text-accent sm:hover:underline" data-astro-prefetch href="https://tangoapp.so/about">
 			Sign up to our beta waitlist here.
 		</a>
-    <br/>
-		<a
-			class="sm:hover:underline text-accent"
-			data-astro-prefetch
-			href="/"
-		>
+		<br />
+		<a class="text-accent sm:hover:underline" data-astro-prefetch href="https://tangoapp.so">
 			Check out our landing page here.
 		</a>
-   </section>
+	</section>
 
 	<section class="mt-16">
 		<h2 class="title mb-4 text-xl">Find me</h2>
-	<SocialList />
-   </section>
+		<SocialList />
+	</section>
 </PageLayout>

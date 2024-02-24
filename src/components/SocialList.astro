@@ -13,30 +13,28 @@ const socialLinks: {
 }[] = [
 	{
 		friendlyName: "Github",
-		link: "https://github.com/chrismwilliams/astro-cactus",
+		link: "https://github.com/hobo1618",
 		name: "mdi:github",
 	},
 	{
-		friendlyName: "Mastodon",
-		link: "#",
-		name: "mdi:mastodon",
-	},
-	{
 		friendlyName: "LinkedIn",
-		link: "#",
+		link: "https://www.linkedin.com/in/willhobden/",
 		name: "mdi:linkedin",
 	},
 	{
-		friendlyName: "email",
-		isWebmention: true,
-		link: "mailto:astro-cactus@chriswilliams.dev",
-		name: "mdi:email",
+		friendlyName: "discord server",
+		link: "https://discord.com/invite/BRDEKRrG",
+		name: "discord",
 	},
+	{
+		friendlyName: "open sat(R)",
+		link: "https://opensat.lol",
+		name: "smiley",
+	}
 ];
 ---
 
 <div class="flex flex-wrap items-end gap-x-4">
-	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
